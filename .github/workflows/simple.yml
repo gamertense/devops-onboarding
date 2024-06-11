@@ -37,3 +37,4 @@ jobs:
           cd logs
           pwd
           grep "test" * | wc -l > results.txt
+          cat results.txt
