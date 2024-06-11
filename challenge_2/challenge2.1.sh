@@ -4,5 +4,6 @@ if [ -d "backup" ]; then
   ls backup
 else
   # If it does not exist, create it and display a message
-  mkdir backup && echo "Directory 'backup' created."
+  mkdir backup
+  echo "Directory 'backup' created."
 fi
