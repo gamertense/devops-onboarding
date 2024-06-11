@@ -38,3 +38,15 @@ jobs:
           pwd
           grep "test" * | wc -l > results.txt
           echo There are $(cat results.txt) lines with the word "test" in the logs.
+
+      - name: Challenge 2.1 - Use logical operators to chain commands based on their success or failure.
+        working-directory: ./challenge_2
+        run: |
+          chmod +x challenge2.1.sh
+          ./challenge2.1.sh
+
+      - name: Challenge 2.2 - Use grep with pipes for advanced text processing.
+        working-directory: ./challenge_2
+        run: |
+          chmod +x challenge2.2.sh
+          ./challenge2.2.sh
