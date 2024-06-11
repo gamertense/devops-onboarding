@@ -25,18 +25,15 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-
-      - name: Navigate to Challenge 1
-        run: |
-          echo Navigate to challeng 1
-          pwd
+      - name: Challenge 1.1 - Use grep to search for specific text in files.
         working-directory: ./challenge_1/example_directory
+        run: |
+          cd logs
+          grep "error" *.log
+
+      - name: Challenge 1.2 - Use pipes to process command outputs
+        working-directory: ./challenge_1/example_directory
+        run: |
+          cd logs
+          pwd
+          grep "test" * | wc -l > results.txt
