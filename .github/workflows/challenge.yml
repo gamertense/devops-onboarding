@@ -46,7 +46,7 @@ jobs:
           ./challenge2.1.sh
 
       - name: Challenge 2.2 - Use grep with pipes for advanced text processing.
+        working-directory: ./challenge_2
         run: |
-          cd ./challenge_2
           chmod +x ./challenge2.2.sh
           ./challenge2.2.sh
